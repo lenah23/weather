@@ -3,7 +3,6 @@ import {
   useGetCurrentWeatherQuery,
   useGetDailyWeatherQuery,
 } from '../store/Requests/weatherApi';
-import { Scales } from '../store/interfaces';
 
 export default () => {
   const [inputValue, setInputValue] = useState<string>('Yerevan');
@@ -55,14 +54,14 @@ export default () => {
   }, [isSuccess]);
 
   return {
-    fetchedData,
-    setInputValue,
-    setSkip,
-    isLoading,
-    isError,
-    initialData,
-    dailyWeatherData,
-    setScale,
     scale,
+    isError,
+    isLoading,
+    initialData,
+    fetchedData,
+    dailyWeatherData,
+    setInputValue,
+    setScale,
+    setSkip,
   };
 };
