@@ -1,0 +1,8 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+  background-color: $header-color;
+  padding: 20px;
+  @include sizes(100vw, fit-content);
+}
