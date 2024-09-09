@@ -62,12 +62,13 @@ const CurrentWeather: React.FC<Iprops> = (props: Iprops) => {
           return (
             <div key={index}>
               <p>
+                Current Weatcher:{' '}
                 {scale === 'f'
                   ? `${temperature(item?.main?.temp)} F`
                   : `${item?.main?.temp} C`}
               </p>
-              <p>Weather: {item?.weather[0]?.description}</p>
-              <p>Weather: {item?.dt_txt}</p>
+              <p>Weather description: {item?.weather[0]?.description}</p>
+              <p>Current date: {item?.dt_txt}</p>
             </div>
           );
         })}
